@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>h3 {text-align: center;}</style>
+<h3>股權分散表-----明細</h3>
+<table class="table table-bordered table-striped ">
+      {% for st_own_list in st_own_lists %}
+      <tr>
+         <td>{{ st_own_list.0 }}</td>
+         <td>{{ st_own_list.1 }}</td>
+         <td>{{ st_own_list.2 }}</td>
+         <td>{{ st_own_list.3 }}</td>
+         <td>{{ st_own_list.4 }}</td>
+         <td>{{ st_own_list.5 }}</td>
+         <td>{{ st_own_list.6 }}</td>
+      </tr>      
+      {% endfor %}
+</table>     
+<input type="button" value="首頁" onclick="self.location.href='http://127.0.0.1:8000/index'" />
+{% endblock  %}
+
+
+<!--# -*- coding: utf-8 -*-
+"""
+ <tr>
+            <p>{{ st_own_list }}</p>
+         </tr>     
+ <p>
+           <td>{{ st_own_list.0 }}</td>
+           <td>{{ st_own_list.1 }}</td>
+           <td>{{ st_own_list.2 }}</td>
+           <td>{{ st_own_list.4 }}</td>
+           <td>{{ st_own_list.5 }}</td>
+           <td>{{ st_own_list.6 }}</td>
+  </p>
+{% for k,v in st_own_lists.items %}
+         <tr>
+            <td>{{v}} </td>         
+             
+         </tr>         
+      {% endfor %}
+{% for k,v in st_own_lists.items %}
+          {% for a in v%}
+            <td>{{a}} </td>  
+          {% endfor %}
+      {% endfor %}
+     
+{% for st_own_list in st_own_lists %}
+         <tr>
+            <p>{{ st_own_list }}</p>
+             
+         </tr>         
+      {% endfor %}
+ {% for st_own_list in st_own_lists %}
+         <tr>
+            <p>{{ st_own_list }}</p>
+            <td>{{ st_own_list.date }}</td>
+            <td>{{ st_own_list.st_no}}</td>   
+            <td>{{ st_own_list.st_rank}}</td>   
+         </tr>         
+      {% endfor %}
+<p>{{ i.date }}</p>
+            <td>{{ i.st_no}}</td>
+            <td>{{ i.st_no}}</td>   
+            <td>{{ i.st_rank}}</td>  
+Created on Sat Feb 13 22:07:05 2021
+ 
+@author: Jack
+
+<thead>
+   <tr>
+     {% for header in headers%}
+     <th>{{ header }}</th>
+     {% endfor %}
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     {% for row in data%}
+     <td>{{row}}</td>
+     {% endfor %}
+
+     {% for stock in stocks %}
+      <tr>
+         <td>{{ stock.date }}</td>
+         <td>{{ stock.st_no}}</td>    
+      </tr>
+      {% endfor %}
+   </tr>
+ </tbody>
+</table>
+"""-->

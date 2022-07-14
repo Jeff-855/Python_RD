@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>h3 {text-align: center;}</style>
+
+    <h3>Python CRUD Test --Index</h3>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label>{{ form.test_id.label }}</label>
+                {{ form.test_id }}
+            </div>
+            <div class="form-group col-md-3">
+                <label>{{ form.name.label }}</label>
+                {{ form.name }}
+            </div>
+			<div class="form-group col-md-3">
+                <label>{{ form.salary.label }}</label>
+                {{ form.salary }}
+            </div>
+            <div class="form-group col-md-1">
+                <input type="submit" class="btn btn-success" style="margin-top:30px;" value="新增">
+            </div>
+        </div>
+    </form>
+ 
+    <table class="table table-bordered table-striped ">
+        <thead class="thead-dark">
+            <tr>
+                <th>序號</th>
+                <th>姓名</th>
+				<th>薪水</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for test in tests %}
+                <tr>
+                    <td>{{ test.test_id }}</td>
+                    <td>{{ test.name }}</td>
+					<td>{{ test.salary }}</td>
+                    <td>
+                        <a href="{% url 'Update' test.test_id %}" class="btn btn-info">更新</a>
+                        <a href="{% url 'Delete' test.test_id %}" class="btn btn-info">刪除</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+<!--<input type="button" value="首頁" onclick="self.location.href='http://127.0.0.1:8000/index'" />-->
+<input type="button" value="首頁" onclick="self.location.href='https://jefftestapp.herokuapp.com/index1'" />
+{% endblock  %}

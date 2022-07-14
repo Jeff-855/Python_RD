@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>h3 {text-align: center;}</style>
+<h3>股權分散表-----明細</h3>
+<table class="table table-bordered table-striped ">
+      {% for st_own_list in st_own_lists %}
+      <tr>
+         <td>{{ st_own_list.0 }}</td>
+         <td>{{ st_own_list.1 }}</td>
+         <td>{{ st_own_list.2 }}</td>
+         <td>{{ st_own_list.3 }}</td>
+         <td>{{ st_own_list.4 }}</td>
+         <td>{{ st_own_list.5 }}</td>
+         <td>{{ st_own_list.6 }}</td>
+      </tr>      
+      {% endfor %}
+</table>     
+<input type="button" value="首頁" onclick="self.location.href='https://jefftestapp.herokuapp.com/index1'" />
+{% endblock  %}

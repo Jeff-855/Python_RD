@@ -1,0 +1,24 @@
+<!--# -*- coding: utf-8 -*-
+"""
+Created on Sat Feb 13 22:07:05 2021
+
+@author: Jack
+"""-->
+<html>
+    <head>
+        <title>Django blog  Test</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="">Django Blog  Test</a></h1>
+        </div>
+
+    {% for test in tests %}
+       <div>
+          <p>published: {{ test.published_date }}</p>
+          <h1><a href="">{{ test.test_id }}</a></h1>
+          <p>{{ test.name|linebreaks }}</p>
+       </div>
+    {% endfor %}
+    </body>
+</html>

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    h3 {text-align: center;}
+    
+    body {
+      background:url("/static/images/python_bg.jpg") no-repeat;
+      background-position: left bottom;
+      }
+      
+</style>
+
+<h3>Python Test Home Page</h3>
+<p> </p>
+<p> </p>
+<p> </p>
+
+    <table class="table table-bordered table-striped ">
+      
+        <tr>
+           <td style="width: 25%"><a href="http://localhost:8000/getStockOwnerDetails" target="_blank" style="font-size:30px;font-family:MingLiU;" title="股權分散表">集保股權分散表</a></td>
+           <td style="width: 25%"><a href="http://localhost:8000/hello" target="_blank" style="font-size:30px" title="hello world">helloworld</a></td>
+		   <!--<td style="width: 25%"><a href=" https://jefftestapp.herokuapp.com/hello" target="_blank" style="font-size:30px" title="hello world">helloworld</a></td>-->
+        </tr>
+        <tr>
+            <td style="width: 25%"><a href="http://localhost:8000/crud" target="_blank" style="font-size:30px;font-family:MingLiU;" title="CRUD Test">Python CRUD Test</a></td>
+            <td style="width: 25%"><a href="http://localhost:8000/blog/" target="_blank" style="font-size:30px;font-family:MingLiU;" title="blog">部落格</a></td>
+         </tr>
+         <tr>
+            <td style="width: 25%"><a href="http://127.0.0.1:8000/admin" target="_blank" style="font-size:30px;font-family:MingLiU;" title="admin">Python管理 jack Td950439</a></td>
+            <td style="width: 25%"><a href="http://localhost:8000/post/" target="_blank" style="font-size:30px;font-family:MingLiU;" title="blog post">mysite部落格</a></td>
+         </tr>               
+  </table>      
+
+{% endblock  %}
